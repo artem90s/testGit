@@ -1,0 +1,15 @@
+report:
+  templates:
+    statement: classpath:reports/statement.jrxml
+    summary: classpath:reports/summary.jrxml
+  default-template-dir: classpath:reports
+
+spring:
+  mvc:
+    problemdetails:
+      enabled: true
+
+logging:
+  level:
+    root: INFO
+    com.example.reportservice: INFO

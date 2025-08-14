@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport name="summary" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="50" bottomMargin="50" uuid="9f4e3b2e-9b55-4a30-8a44-fd916e5a1a45">
+    <parameter name="title" class="java.lang.String"/>
+    <parameter name="generatedAt" class="java.lang.String"/>
+
+    <title>
+        <band height="60">
+            <staticText>
+                <reportElement x="0" y="0" width="515" height="20"/>
+                <textElement textAlignment="Center">
+                    <font size="16" isBold="true"/>
+                </textElement>
+                <text><![CDATA[$P{title}]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="0" y="24" width="515" height="16"/>
+                <textElement textAlignment="Center">
+                    <font size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Generated: " + $P{generatedAt}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+
+    <detail>
+        <band height="18">
+            <staticText>
+                <reportElement x="0" y="0" width="515" height="18"/>
+                <textElement textAlignment="Center"/>
+                <text><![CDATA[No details. Configure as needed.]]></text>
+            </staticText>
+        </band>
+    </detail>
+</jasperReport>
